@@ -9,8 +9,10 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.fuel = 100
     }
 
+}
     start() {
         if (this.fuel > 0) {
             return this.started = true;
@@ -20,6 +22,7 @@ class Vehicle {
             console.log("engine cannot start...");
         }
     }
+
     accelerate() {
         if (this.started) {
             if (this.fuel > 0) {
@@ -51,14 +54,19 @@ class Vehicle {
             alert("You need to start the engine first.");
         }
     }
-    stop() {
+
+    stop() 
+    {
         this.started = false;
+        console.log('engine off')
     }
 
-    drive() {
+    drive() 
+    {
         accelerate();
     }
-    brake() {
+    brake() 
+    {
         decelerate();
     }
 
@@ -83,7 +91,7 @@ class Vehicle {
             console.log("Unknown type of vehicle");
         }
     }
-}
+
 
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
